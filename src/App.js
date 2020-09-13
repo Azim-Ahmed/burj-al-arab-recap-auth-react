@@ -9,6 +9,7 @@ import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import Book from './components/Book/Book';
 import Header from './components/Header/Header';
+import PrivateRouter from './components/PrivateRouter/PrivateRouter';
 
 export const UserContext = createContext()
 
@@ -27,9 +28,9 @@ function App() {
             <Route path="/login">
               <Login />
             </Route>
-            <Route path="/book/:bedType">
+            <PrivateRouter path="/book/:bedType">
               <Book />
-            </Route>
+            </PrivateRouter>
             <Route exact path="/">
               <Home />
             </Route>
