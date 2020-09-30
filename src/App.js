@@ -10,6 +10,7 @@ import Login from './components/Login/Login';
 import Book from './components/Book/Book';
 import Header from './components/Header/Header';
 import PrivateRouter from './components/PrivateRouter/PrivateRouter';
+import Carousels from './components/Carousel/Carousel';
 
 export const UserContext = createContext()
 
@@ -20,6 +21,7 @@ function App() {
     <UserContext.Provider value = {[loggedInUser, setLoggedInUser]}>
       { <p>Name : {loggedInUser.name}</p> }
       <Router>
+        {/* <Carousels></Carousels> */}
           <Header/>
           <Switch>
             <Route path="/home">
